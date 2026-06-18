@@ -4,10 +4,10 @@ import NavBar from "./HeaderComponents/NavBar"
 function Header() {
 
     return (
-        <div>
+        <header>
             <Greeting/>
             <NavBar/>
-        </div>
+        </header>
     )
 }
 

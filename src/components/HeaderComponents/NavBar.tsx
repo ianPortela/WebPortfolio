@@ -5,10 +5,10 @@ function NavBar() {
         <nav>
             <ul>
                 <li><LinkToSection idSection="profile" text="Perfil"/></li>
-                <li><LinkToSection idSection="" text="Proyectos"/></li>
-                <li><LinkToSection idSection="" text="Conocimientos"/></li>
-                <li><LinkToSection idSection="" text="Sobre mi"/></li>
-                <li><LinkToSection idSection="" text="Contactame"/></li>
+                <li><LinkToSection idSection="projects" text="Proyectos"/></li>
+                <li><LinkToSection idSection="knowledge" text="Conocimientos"/></li>
+                <li><LinkToSection idSection="certifications" text="Sobre mi"/></li>
+                <li><LinkToSection idSection="aboutMe" text="Contactame"/></li>
             </ul>
         </nav>
     )

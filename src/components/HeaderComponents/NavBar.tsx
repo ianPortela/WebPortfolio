@@ -7,7 +7,6 @@ function NavBar() {
                 <li><LinkToSection idSection="profile" text="Perfil"/></li>
                 <li><LinkToSection idSection="projects" text="Proyectos"/></li>
                 <li><LinkToSection idSection="knowledge" text="Conocimientos"/></li>
-                <li><LinkToSection idSection="certifications" text="Sobre mi"/></li>
                 <li><LinkToSection idSection="aboutMe" text="Contactame"/></li>
             </ul>
         </nav>

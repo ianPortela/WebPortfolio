@@ -1,6 +1,7 @@
-import Tag from "./Tag"
+import Tag, { type TechIcon } from "./Tag";
 
-function ProjectCard ({title, imageBackground, technologies} : {title:string, imageBackground?:string, technologies:ReadonlyArray<string>}) {
+
+function ProjectCard ({title, imageBackground, technologies} : {title:string, imageBackground?:string, technologies:ReadonlyArray<TechIcon>}) {
     return (
         <a style={{
             backgroundImage: imageBackground ? `url(${imageBackground})` : undefined,
@@ -9,7 +10,7 @@ function ProjectCard ({title, imageBackground, technologies} : {title:string, im
         }}>
             <h3>{title}</h3>
             {technologies.map(tech => (
-                <Tag text={tech}></Tag>
+                <Tag key={tech} type={tech}/>
             ))
             }
         </a>

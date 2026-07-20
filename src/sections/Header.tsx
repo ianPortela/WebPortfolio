@@ -1,10 +1,10 @@
-import Greeting from "./HeaderComponents/Greeting"
-import NavBar from "./HeaderComponents/NavBar"
+import Greeting from "../components/HeaderComponents/Greeting"
+import NavBar from "../components/HeaderComponents/NavBar"
 
 function Header() {
 
     return (
-        <header>
+        <header className="hidden sm:flex flex-row">
             <Greeting/>
             <NavBar/>
         </header>

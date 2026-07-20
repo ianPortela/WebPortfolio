@@ -1,23 +1,25 @@
 import ContactButton from "../components/ContentComponents/ContactButton"
 import ImageProfile from "../components/ContentComponents/ImageProfile"
 import Subtitle from "../components/Subtitle"
-import ProjectCard from "./ContentComponents/ProjectCard"
-import Tag, { technologiesKeys } from "./ContentComponents/Tag"
+import ProjectCard from "../components/ContentComponents/ProjectCard"
+import Tag, { technologiesKeys } from "../components/ContentComponents/Tag"
 
 function Content() {
 
     return (
         <main>
-            <section id="profile">
+            <section className="flex flex-col my-8 md:flex-row items-center justify-center gap-12" id="profile">
                 <ImageProfile/>
-                <h1>Ian Portela Miranda</h1>
-                <Subtitle text="Tecnico en Programacion"/>
-                <h3>Backend Developer - Java & Spring</h3>
-                <div>
-                    <ContactButton url="mailto:ian080406@gmail.com" text="Mi mail"/>
-                    <ContactButton url="https://github.com/ianPortela" img="src/assets/icons/ic_github.svg"/>
-                    <ContactButton url="src/assets/files/Copia de Currículum_Ian_Portela_Miranda.pdf" img="src/assets/icons/ic_cv.svg"/>
-                    <ContactButton url="https://www.linkedin.com/in/ian-portela-miranda-623a64340/" img="src/assets/icons/ic_in.svg"/>
+                <div className="flex flex-col space-y-4 max-w-xl text-center md:text-left">
+                    <h1 className="text-5xl">Ian Portela Miranda</h1>
+                    <Subtitle text="Tecnico en Programacion"/>
+                    <h3 className="text-xl">Backend Developer - Java & Spring</h3>
+                    <div className="flex md:justify-evenly gap-4">
+                        <ContactButton url="mailto:ian080406@gmail.com" text="Mi mail"/>
+                        <ContactButton url="https://github.com/ianPortela" img="src/assets/icons/ic_github.svg"/>
+                        <ContactButton url="src/assets/files/Copia de Currículum_Ian_Portela_Miranda.pdf" img="src/assets/icons/ic_cv.svg"/>
+                        <ContactButton url="https://www.linkedin.com/in/ian-portela-miranda-623a64340/" img="src/assets/icons/ic_in.svg"/>
+                    </div>
                 </div>
             </section>
             <hr />

@@ -42,6 +42,14 @@ export const technologies = {
     "SQL Server": {
         icon: "src/assets/icons/database.svg",
         category: "Base de datos",
+    },
+    React: {
+        icon: "src/assets/icons/react.svg",
+        category: "Frontend",
+    },
+    "Tailwind CSS": {
+        icon: "src/assets/icons/tailwind-css.svg",
+        category: "Frontend"
     }
 } as const;
 
@@ -59,7 +67,7 @@ function Tag({ type }: { type: TechIcon }) {
     return (
         <span className="inline-flex h-7 sm:h-9 w-fit items-center gap-2 rounded-xl border border-orange-400 px-3 text-amber-500 transition duration-200 hover:bg-amber-500 hover:text-white">
             <img className="size-3 sm:size-5 invert" src={technologies[type].icon} alt="" />
-            <span className="whitespace-nowrap text-xs sm:text-sm">
+            <span className="whitespace-nowrap text-xs">
                 {type}
             </span>
         </span>

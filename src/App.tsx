@@ -5,7 +5,7 @@ import Header from "./sections/Header"
 function App() {
 
   return (
-    <div className="bg-zinc-800">
+    <div className="bg-gray-950">
       <Header/>
       <Content/>
       <Footer/>

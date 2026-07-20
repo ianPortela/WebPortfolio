@@ -15,7 +15,7 @@ function Content() {
                     <Subtitle text="Tecnico en Programacion"/>
                     <h3 className="text-xl text-white">Backend Developer - Java & Spring</h3>
                     <div className="flex md:justify-between gap-2">
-                        <ContactButton url="mailto:ian080406@gmail.com" text="Mi mail"/>
+                        <ContactButton url="mailto:ian080406@gmail.com" text="mi email"/>
                         <ContactButton url="https://github.com/ianPortela" img="src/assets/icons/ic_github.svg"/>
                         <ContactButton url="src/assets/files/Copia de Currículum_Ian_Portela_Miranda.pdf" img="src/assets/icons/ic_cv.svg"/>
                         <ContactButton url="https://www.linkedin.com/in/ian-portela-miranda-623a64340/" img="src/assets/icons/ic_in.svg"/>
@@ -28,10 +28,16 @@ function Content() {
             <section className="flex flex-col gap-20 my-8 items-center justify-center" id="projects">
                 <Subtitle text="Proyectos"/>
                 <div className="flex flex-col gap-8 sm:flex-row sm:justify-evenly  items-center w-full px-4">
-                    <ProjectCard title="TDS" imageBackground="src/assets/images/profileImage.webp" technologies={["Kotlin", "Room"]}/>
+                    <ProjectCard title="TDS" imageBackground="src/assets/images/tds.webp" technologies={["Kotlin", "Room"]}/>
                     <ProjectCard title="urlStorage" imageBackground="src/assets/images/profileImage.webp" technologies={["Java", "Spring Boot"]}/>
-                    <ProjectCard title="MyInventary" imageBackground="src/assets/images/profileImage.webp" technologies={["TypeScript", "HTML", "CSS"]}/>
+                    <ProjectCard title="MyInventary" imageBackground="src/assets/images/profileImage.webp" technologies={["React", "Tailwind CSS"]}/>
                 </div>
+            </section>
+
+            <hr className="border-gray-800 border-2 mx-20 my-20"/>
+
+            <section id="services">
+                
             </section>
 
             <hr className="border-gray-800 border-2 mx-20 my-20"/>
@@ -63,13 +69,13 @@ function Content() {
 
             <hr className="border-gray-800 border-2 mx-20 my-20"/>
 
-            <section id="aboutMe">
+            <section className="flex flex-col items-center p-5" id="aboutMe">
                 <Subtitle text="Sobre mi"/>
-                <div>
-                    <p className="text-white">
-                        Soy estudiante de Programación en la Universidad Tecnológica Nacional (UTN), 
-                        apasionado por el desarrollo de software y especialmente por el backend. 
-                        Mi enfoque está en el desarrollo de aplicaciones utilizando Java, Spring Boot y bases de datos SQL,
+                <div className="my-20 bg-amber-600 rounded-xl border-2 border-orange-700">
+                    <p className="text-white p-4">
+                        Soy graduado de la <b>Tecnicatura Universitaria en Programación</b> en la Universidad Tecnológica Nacional (UTN), 
+                        apasionado por el desarrollo de software (especialmente por el backend) y el ejercicio. 
+                        Mi enfoque está en el desarrollo de aplicaciones utilizando <b>Java</b>, <b>Spring Boot</b> y bases de datos SQL,
                         complementando estos conocimientos con TypeScript, React, Git y GitHub. 
                         Me interesa diseñar software escalable y mantenible mediante la aplicación de buenas prácticas, 
                         principios SOLID, patrones de diseño y arquitectura de software. 

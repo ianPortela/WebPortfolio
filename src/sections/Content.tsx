@@ -4,8 +4,40 @@ import Subtitle from "../components/Subtitle"
 import ProjectCard from "../components/ContentComponents/ProjectCard"
 import Tag, { technologiesKeys } from "../components/ContentComponents/Tag"
 import ServiceCard from "../components/ContentComponents/ServiceCard"
+import { useState } from "react"
+import emailjs from "@emailjs/browser";
 
 function Content() {
+
+    const [form, setForm] = useState({
+        name: "",
+        email: "",
+        message: ""
+    })
+
+    async function handleSubmit(e:React.FormEvent<HTMLFormElement>) {
+        e.preventDefault()
+        
+
+        try {
+            await emailjs.send(
+                import.meta.env.VITE_EMAILJS_SERVICE_ID,
+                import.meta.env.VITE_EMAILJS_TEMPLATE_ID,
+                form,
+                import.meta.env.VITE_EMAILJS_PUBLIC_KEY
+            )
+
+            alert("El mail se ha enviado correctamente.")
+        }catch(error) {
+            alert("El mail no se ha enviado, intenta otra vez.")
+        }finally {
+            setForm({
+                name: "",
+                email: "",
+                message: ""
+            })
+        }
+    }
 
     return (
         <main className="bg-gray-950 pt-10 sm:mx-40 sm:pt-30 sm:border-l-2 sm:border-r-2 sm:border-gray-700">
@@ -71,13 +103,13 @@ function Content() {
                         </div>
                     ))}
                 </div>
-        </section>
+            </section>
 
             <hr className="border-gray-800 border-2 mx-20 my-20"/>
 
             <section className="flex flex-col items-center p-5" id="aboutMe">
                 <Subtitle text="Sobre mi"/>
-                <div className="my-20 sm:px-20">
+                <div className="my-15 sm:px-20">
                     <p className="bg-amber-600 rounded-xl border-2 border-orange-700 text-white p-4 sm:py-6 sm:px-6">
                         Soy graduado de la <b>Tecnicatura Universitaria en Programación</b> en la Universidad Tecnológica Nacional (UTN), 
                         apasionado por el desarrollo de software (especialmente por el backend). 
@@ -87,6 +119,46 @@ function Content() {
                         reales y desarrollar soluciones de calidad.
                     </p>
                 </div>
+            </section>
+
+            <hr className="border-gray-800 border-2 mx-20 my-20"/>
+
+            <section className="flex flex-col items-center p-5" id="contact">
+                <Subtitle text="¿Trabajamos Juntos?"/>
+                <form onSubmit={handleSubmit} className="flex flex-col justify-center gap-2 my-8 border-2 border-amber-500 rounded-xl p-5 w-100 h-120 sm:w-150 sm:h-170">
+                    <label htmlFor="name" className="text-white">Nombre</label>
+                    <input 
+                        type="text" 
+                        id="name" 
+                        placeholder="Ian Portela Miranda"
+                        onChange={(e) => {setForm({...form, name: e.target.value})}}
+                        value={form.name}
+                        className="text-white border-2 rounded-lg p-2"
+                        />
+                    <label htmlFor="email" className="text-white mt-3">Tu email</label>
+                    <input 
+                        type="email"
+                        id="email" 
+                        placeholder="ian080406@gmail.com"
+                        onChange={(e) => {setForm({...form, email: e.target.value})}}
+                        value={form.email}
+                        className="text-white border-2 rounded-lg p-2"
+                        />
+                    <label htmlFor="message" className="text-white mt-3">Mensaje</label>
+                    <textarea 
+                        id="message"
+                        placeholder="Hola, quiero..."
+                        onChange={(e) => {setForm({...form, message: e.target.value})}}
+                        value={form.message}
+                        cols={90}
+                        rows={160}
+                        className="text-white border-2 rounded-lg p-2"
+                        ></textarea>
+                    <button type="submit" 
+                        className="text-white border-3 border-orange-800 font-bold bg-amber-600 rounded-xl text-xl py-3 w-80 m-auto transition duration-300 hover:bg-amber-500 hover:-translate-y-1 mt-10 mb-2"
+                        >Contactar
+                    </button>
+                </form>
             </section>
         </main>
     )

@@ -8,7 +8,8 @@ function NavBar() {
                 <li><LinkToSection idSection="projects" text="Proyectos"/></li>
                 <li><LinkToSection idSection="services" text="Servicios"></LinkToSection></li>
                 <li><LinkToSection idSection="knowledge" text="Conocimientos"/></li>
-                <li><LinkToSection idSection="aboutMe" text="Contactame"/></li>
+                <li><LinkToSection idSection="aboutMe" text="Sobre mi"/></li>
+                <li><LinkToSection idSection="contact" text="Contactame"/></li>
             </ul>
         </nav>
     )

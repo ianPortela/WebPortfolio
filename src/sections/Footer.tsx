@@ -1,5 +1,3 @@
-import ContactButton from "../components/ContentComponents/ContactButton"
-
 function Footer() {
 
     return (

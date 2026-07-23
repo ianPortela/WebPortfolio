@@ -1,4 +1,4 @@
-import Item from "./item";
+import Item from "./Item";
 
 function ServiceCard({service, serviceDescription} : {service:string, serviceDescription:string}) {
     return (

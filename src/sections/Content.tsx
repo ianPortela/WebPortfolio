@@ -3,7 +3,7 @@ import ImageProfile from "../components/ContentComponents/ImageProfile"
 import Subtitle from "../components/Subtitle"
 import ProjectCard from "../components/ContentComponents/ProjectCard"
 import Tag, { technologiesKeys } from "../components/ContentComponents/Tag"
-import ServiceCard from "../components/ServicesComponent/ServiceCard"
+import ServiceCard from "../components/ContentComponents/ServiceCard"
 
 function Content() {
 
@@ -80,11 +80,9 @@ function Content() {
                 <div className="my-20 sm:px-20">
                     <p className="bg-amber-600 rounded-xl border-2 border-orange-700 text-white p-4 sm:py-6 sm:px-6">
                         Soy graduado de la <b>Tecnicatura Universitaria en Programación</b> en la Universidad Tecnológica Nacional (UTN), 
-                        apasionado por el desarrollo de software (especialmente por el backend) y el ejercicio. 
-                        Mi enfoque está en el desarrollo de aplicaciones utilizando <b>Java</b>, <b>Spring Boot</b> y bases de datos SQL,
-                        complementando estos conocimientos con TypeScript, React, Git y GitHub. 
+                        apasionado por el desarrollo de software (especialmente por el backend). 
                         Me interesa diseñar software escalable y mantenible mediante la aplicación de buenas prácticas, 
-                        principios SOLID, patrones de diseño y arquitectura de software. 
+                        principios SOLID y patrones de diseño. 
                         Busco seguir creciendo profesionalmente participando en proyectos que me permitan resolver problemas 
                         reales y desarrollar soluciones de calidad.
                     </p>

@@ -6,6 +6,10 @@ import Tag, { technologiesKeys } from "../components/ContentComponents/Tag"
 import ServiceCard from "../components/ContentComponents/ServiceCard"
 import { useState } from "react"
 import emailjs from "@emailjs/browser";
+import icGitHub from "../assets/icons/ic_github.svg"
+import icCV from "../assets/icons/ic_cv.svg"
+import icLinkedIn from "../assets/icons/ic_in.svg"
+import imgTDS from "../assets/images/tds.webp"
 
 function Content() {
 
@@ -40,7 +44,7 @@ function Content() {
     }
 
     return (
-        <main className="bg-gray-950 pt-10 md:pt-24 w-full max-w-7xl mx-auto xl:border-x-2 xl:border-gray-700">
+        <div className="bg-gray-950 pt-10 md:pt-24 w-full max-w-7xl mx-auto xl:border-x-2 xl:border-gray-700">
             <section className="flex flex-col md:flex-row items-center justify-center gap-12 px-6 md:px-12 lg:px-16" id="profile">
                 <ImageProfile/>
                 <div className="flex flex-col space-y-4 max-w-xl text-center md:text-left">
@@ -49,9 +53,9 @@ function Content() {
                     <h3 className="text-xl text-white italic"><span className="text-amber-600 font-bold">Backend Developer</span> - Java & Spring Boot</h3>
                     <div className="flex flex-wrap justify-center md:justify-start gap-3">
                         <ContactButton url="mailto:ian080406@gmail.com" text="mi email"/>
-                        <ContactButton url="https://github.com/ianPortela" img="src/assets/icons/ic_github.svg"/>
-                        <ContactButton url="src/assets/files/Copia de Currículum_Ian_Portela_Miranda.pdf" img="src/assets/icons/ic_cv.svg"/>
-                        <ContactButton url="https://www.linkedin.com/in/ian-portela-miranda-623a64340/" img="src/assets/icons/ic_in.svg"/>
+                        <ContactButton url="https://github.com/ianPortela" img={icGitHub}/>
+                        <ContactButton url="src/assets/files/Copia de Currículum_Ian_Portela_Miranda.pdf" img={icCV}/>
+                        <ContactButton url="https://www.linkedin.com/in/ian-portela-miranda-623a64340/" img={icLinkedIn}/>
                     </div>
                 </div>
             </section>
@@ -61,7 +65,7 @@ function Content() {
             <section className="flex flex-col gap-12 my-8 items-center justify-center" id="projects">
                 <Subtitle text="Proyectos"/>
                 <div className="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-8 w-full px-6 md:px-12 lg:px-16">
-                    <ProjectCard title="TDS" imageBackground="src/assets/images/tds.webp" technologies={["Kotlin", "Room"]}/>
+                    <ProjectCard title="TDS" imageBackground={imgTDS} technologies={["Kotlin", "Room"]}/>
                 </div>
             </section>
 
@@ -156,7 +160,7 @@ function Content() {
                     </button>
                 </form>
             </section>
-        </main>
+        </div>
     )
 }
 

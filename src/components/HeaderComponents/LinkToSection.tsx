@@ -5,9 +5,10 @@ function LinkToSection({
     idSection: string;
     text: string;
 }) {
+
     return (
         <a
-            href={`#${idSection}`}
+            href={idSection}
             className="
                 relative
                 text-sm

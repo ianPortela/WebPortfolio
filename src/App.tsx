@@ -12,7 +12,7 @@ function App() {
       <main className="flex-1">
         <Routes>
               <Route path="/" element={<Content/>} />
-              <Route path="/projects/:name" element={<Projects/>} />
+              <Route path="/projects/:id" element={<Projects/>} />
         </Routes>
       </main>
       <Footer/>

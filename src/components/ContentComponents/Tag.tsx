@@ -1,56 +1,68 @@
+import icJava from "../../assets/icons/java.svg";
+import icSpringBoot from "../../assets/icons/spring-boot.svg";
+import icKotlin from "../../assets/icons/kotlin.svg";
+import icJavaScript from "../../assets/icons/javascript.svg";
+import icTypeScript from "../../assets/icons/typescript.svg";
+import icHTML from "../../assets/icons/html.svg";
+import icCSS from "../../assets/icons/css.svg";
+import icBootstrap from "../../assets/icons/bootstrap.svg";
+import icDatabase from "../../assets/icons/database.svg";
+import icReact from "../../assets/icons/react.svg";
+import icTailwindCSS from "../../assets/icons/tailwind-css.svg";
+
 export const technologies = {
     Java: {
-        icon: "src/assets/icons/java.svg",
+        icon: icJava,
         category: "Backend",
     },
     "Spring Boot": {
-        icon: "src/assets/icons/spring-boot.svg",
+        icon: icSpringBoot,
         category: "Backend",
     },
     Kotlin: {
-        icon: "src/assets/icons/kotlin.svg",
+        icon: icKotlin,
         category: "Backend",
     },
     JavaScript: {
-        icon: "src/assets/icons/javascript.svg",
+        icon: icJavaScript,
         category: "Frontend",
     },
     TypeScript: {
-        icon: "src/assets/icons/typescript.svg",
+        icon: icTypeScript,
         category: "Frontend",
     },
     HTML: {
-        icon: "src/assets/icons/html.svg",
+        icon: icHTML,
         category: "Frontend",
     },
     CSS: {
-        icon: "src/assets/icons/css.svg",
+        icon: icCSS,
         category: "Frontend",
     },
     Bootstrap: {
-        icon: "src/assets/icons/bootstrap.svg",
+        icon: icBootstrap,
         category: "Frontend",
     },
     Room: {
-        icon: "src/assets/icons/database.svg",
+        icon: icDatabase,
         category: "Base de datos",
     },
     MySQL: {
-        icon: "src/assets/icons/database.svg",
+        icon: icDatabase,
         category: "Base de datos",
     },
     "SQL Server": {
-        icon: "src/assets/icons/database.svg",
+        icon: icDatabase,
         category: "Base de datos",
     },
     React: {
-        icon: "src/assets/icons/react.svg",
+        icon: icReact,
         category: "Frontend",
     },
     "Tailwind CSS": {
-        icon: "src/assets/icons/tailwind-css.svg",
-        category: "Frontend"
-    }
+        icon: icTailwindCSS,
+        category: "Frontend",
+    },
 } as const;
 
 export type TechIcon = keyof typeof technologies;

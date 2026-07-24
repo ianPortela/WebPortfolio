@@ -1,5 +1,4 @@
 import { useParams } from "react-router-dom"
-import { type TechIcon } from "../components/ContentComponents/Tag"
 import Tag from "../components/ContentComponents/Tag"
 import Subtitle from "../components/Subtitle"
 import { projects } from "../assets/ProjectsData"

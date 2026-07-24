@@ -13,9 +13,9 @@ function ProjectCard({ title, imageBackground, technologies }: { title: string, 
 
             <div className="absolute inset-0 bg-gradient-to-t from-black via-black/50 to-transparent" />
 
-            <div className="absolute bottom-0 flex w-full flex-col gap-4 p-6">
+            <div className="absolute inset-0 flex flex-col justify-between p-6">
 
-                <h3 className="text-2xl font-bold text-white">
+                <h3 className="text-2xl font-bold text-amber-600">
                     {title}
                 </h3>
 

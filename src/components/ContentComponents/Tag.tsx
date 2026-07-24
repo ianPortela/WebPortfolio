@@ -65,13 +65,49 @@ export const technologiesKeys = Object.entries(technologies).reduce(
 
 function Tag({ type }: { type: TechIcon }) {
     return (
-        <span className="inline-flex h-7 sm:h-9 w-fit items-center gap-2 rounded-xl border border-orange-400 px-3 text-amber-500 transition duration-200 hover:bg-amber-500 hover:text-white">
-            <img className="size-3 sm:size-5 invert" src={technologies[type].icon} alt="" />
-            <span className="whitespace-nowrap text-xs">
+        <span
+            className="
+                inline-flex
+                w-fit
+                items-center
+                gap-1
+                rounded-lg
+                border border-orange-400
+                px-2 py-1
+                text-amber-500
+                transition-all
+                duration-200
+                hover:bg-amber-500
+                hover:text-white
+                sm:gap-2
+                sm:rounded-xl
+                sm:px-3
+                sm:py-1.5
+            "
+        >
+            <img
+                className="
+                    h-3 w-3
+                    invert
+                    sm:h-4 sm:w-4
+                    lg:h-5 lg:w-5
+                "
+                src={technologies[type].icon}
+                alt=""
+            />
+
+            <span
+                className="
+                    whitespace-nowrap
+                    text-[10px]
+                    sm:text-xs
+                    lg:text-sm
+                "
+            >
                 {type}
             </span>
         </span>
-    )
+    );
 }
 
-export default Tag
+export default Tag;

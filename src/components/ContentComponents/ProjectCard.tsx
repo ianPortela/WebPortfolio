@@ -3,7 +3,7 @@ import Tag, { type TechIcon } from "./Tag";
 
 function ProjectCard({ title, imageBackground, technologies }: { title: string, imageBackground?: string, technologies: ReadonlyArray<TechIcon> }) {
     return (
-        <a className="group relative h-72 w-full overflow-hidden rounded-3xl border border-neutral-700 bg-neutral-900 transition-all duration-300 hover:-translate-y-1 hover:border-amber-500 hover:shadow-xl p-2">
+        <a href={`/projects/${title}`} className="group relative h-72 w-full overflow-hidden rounded-3xl border border-neutral-700 bg-neutral-900 transition-all duration-300 hover:-translate-y-1 hover:border-amber-500 hover:shadow-xl p-2">
 
             <img
                 src={imageBackground}

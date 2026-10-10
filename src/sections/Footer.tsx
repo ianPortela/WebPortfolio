@@ -34,7 +34,7 @@ function FooterButton({ icon, url }: { icon: string; url: string }) {
             <img
                 className="h-8 w-8 invert sm:h-10 sm:w-10 md:h-12 md:w-12"
                 src={icon}
-                alt=""
+                alt="icono para contacto"
             />
         </a>
     );

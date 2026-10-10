@@ -1,3 +1,6 @@
+import profileImage from "/src/assets/images/profileImage.webp";
+
+
 function ImageProfile() {
     return (
         <div className="flex justify-center">
@@ -12,7 +15,7 @@ function ImageProfile() {
                     lg:h-64 lg:w-64
                     xl:h-72 xl:w-72
                 "
-                src="src/assets/images/profileImage.webp"
+                src={profileImage}
                 alt="Imagen Ian Portela Miranda"
             />
         </div>

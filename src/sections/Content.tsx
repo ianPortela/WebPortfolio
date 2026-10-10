@@ -10,6 +10,7 @@ import icGitHub from "../assets/icons/ic_github.svg"
 import icCV from "../assets/icons/ic_cv.svg"
 import icLinkedIn from "../assets/icons/ic_in.svg"
 import imgTDS from "../assets/images/tds.webp"
+import cv from "../assets/files/Currículum_Ian_Portela_Miranda.pdf"
 
 function Content() {
 
@@ -54,7 +55,7 @@ function Content() {
                     <div className="flex flex-wrap justify-center md:justify-start gap-3">
                         <ContactButton url="mailto:ian080406@gmail.com" text="mi email"/>
                         <ContactButton url="https://github.com/ianPortela" img={icGitHub}/>
-                        <ContactButton url="src/assets/files/Copia de Currículum_Ian_Portela_Miranda.pdf" img={icCV}/>
+                        <ContactButton url={cv} img={icCV}/>
                         <ContactButton url="https://www.linkedin.com/in/ian-portela-miranda-623a64340/" img={icLinkedIn}/>
                     </div>
                 </div>

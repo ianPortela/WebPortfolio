@@ -1,11 +1,9 @@
-import { useState } from "react";
 import LinkToSection from "./LinkToSection"
 import { useLocation } from "react-router-dom";
 
 function NavBar() {
 
     const location = useLocation()
-    const isProjectPage = location.pathname.startsWith("/projects/")
     const page = location.pathname.startsWith("/projects/")
         ? "/"
         : "";

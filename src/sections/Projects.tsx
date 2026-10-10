@@ -11,7 +11,7 @@ function Projects() {
     const project = projects.find(p => p.id == id)
 
     if (!project) {
-        return <h1>Proyecto no encontrado</h1>;
+        return <h2>Proyecto no encontrado</h2>;
     }
 
     return (

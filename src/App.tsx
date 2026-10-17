@@ -3,6 +3,7 @@ import Content from "./sections/Content"
 import Header from "./sections/Header"
 import { Routes, Route } from "react-router-dom";
 import Projects from "./sections/Projects";
+import NotFound from "./sections/NotFound";
 
 function App() {
 
@@ -13,6 +14,7 @@ function App() {
         <Routes>
               <Route path="/" element={<Content/>} />
               <Route path="/projects/:id" element={<Projects/>} />
+              <Route path="*" element={<NotFound/>} />
         </Routes>
       </main>
       <Footer/>

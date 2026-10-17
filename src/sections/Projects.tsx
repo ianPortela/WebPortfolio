@@ -2,6 +2,7 @@ import { useParams } from "react-router-dom"
 import Tag from "../components/ContentComponents/Tag"
 import Subtitle from "../components/Subtitle"
 import { projects } from "../assets/ProjectsData"
+import NotFound from "./NotFound"
 
 
 function Projects() {
@@ -11,7 +12,7 @@ function Projects() {
     const project = projects.find(p => p.id == id)
 
     if (!project) {
-        return <h2>Proyecto no encontrado</h2>;
+        return <NotFound />;
     }
 
     return (

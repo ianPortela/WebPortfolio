@@ -1,8 +1,8 @@
+
 function ContactButton({
     url,
     text,
     img,
-    color = "bg-amber-600",
 }: {
     url: string;
     text?: string;
@@ -15,25 +15,32 @@ function ContactButton({
                 href={url}
                 target="_blank"
                 rel="noopener noreferrer"
-                className={`
-                    group flex flex-1 items-center justify-center
-                    rounded-lg border-2 border-orange-800
-                    ${color}
-                    px-4 py-3
+                aria-label="Abrir enlace de contacto"
+                className="
+                    group flex min-w-0 flex-1
+                    min-h-12 items-center justify-center
+                    rounded-xl border border-amber-500/30
+                    bg-amber-500
                     transition-all duration-300
                     hover:-translate-y-1
-                    hover:border-amber-500
-                    hover:shadow-lg
-                    hover:brightness-110
-                    sm:px-5
-                    lg:px-6
-                `}
+                    hover:border-amber-400
+                    hover:bg-amber-400
+                    hover:shadow-[0_8px_20px_rgba(245,158,11,0.25)]
+                "
             >
-                <img
-                    src={img}
-                    alt=""
-                    className="h-6 w-6 invert transition-transform duration-300 group-hover:scale-110 sm:h-7 sm:w-7 lg:h-8 lg:w-8"
-                />
+                {img && (
+                    <img
+                        src={img}
+                        alt=""
+                        className="
+                            size-5 object-contain
+                            brightness-0 invert
+                            transition-transform duration-300
+                            group-hover:scale-110
+                            sm:size-6
+                        "
+                    />
+                )}
             </a>
         );
     }
@@ -43,27 +50,23 @@ function ContactButton({
             href={url}
             target="_blank"
             rel="noopener noreferrer"
-            className={`
-                group flex flex-[3] items-center justify-center
-                rounded-lg border-2 border-orange-800
-                ${color}
-                px-4 py-3
-                font-semibold text-white
+            className="
+                group flex min-w-0 flex-[2]
+                min-h-12 items-center justify-center gap-2
+                rounded-xl border border-amber-500/30
+                bg-amber-500 px-3 py-3
+                font-semibold text-black
                 transition-all duration-300
                 hover:-translate-y-1
-                hover:border-amber-500
-                hover:shadow-lg
-                hover:brightness-110
+                hover:border-amber-400
+                hover:bg-amber-400
+                hover:shadow-[0_8px_25px_rgba(245,158,11,0.20)]
                 sm:px-5
                 lg:px-6
-            `}
+            "
         >
-            <span className="text-sm sm:hidden">
+            <span className="truncate text-sm">
                 {text}
-            </span>
-
-            <span className="hidden text-sm md:inline lg:text-base">
-                ian080406@gmail.com
             </span>
         </a>
     );

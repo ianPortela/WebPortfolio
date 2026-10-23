@@ -63,7 +63,7 @@ function Projects() {
                     </div>
 
                     <div className="grid gap-4 md:grid-cols-2">
-                        {project.features.map((feature, index) => (
+                        {project.features.map((feature) => (
                             <article
                                 key={feature.title}
                                 className="group flex gap-5 rounded-2xl border border-white/[0.09] bg-[#0b0b0b] p-6 transition-colors duration-300 hover:border-amber-500/30 sm:p-8"
@@ -103,7 +103,7 @@ function Projects() {
                     </div>
 
                     <div className="divide-y divide-white/[0.09] border-y border-white/[0.09]">
-                        {project.description.librerias.map((library, index) => (
+                        {project.description.librerias.map((library) => (
                             <article
                                 key={library.lib}
                                 className="grid gap-2 py-5 sm:grid-cols-[180px_1fr] sm:gap-8"
